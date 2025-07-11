@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "내 뉴스 바구니",
+  "description": "네이버 뉴스 기사 제목을 드래그해서 바구니에 담아두고 나중에 볼 수 있게 해주는 크롬 확장 프로그램입니다.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.naver.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

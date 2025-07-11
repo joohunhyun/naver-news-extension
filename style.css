@@ -1,0 +1,204 @@
+/* Minimal Tailwind-like styles for 내 뉴스 바구니 sidebar */
+#naver-news-cart-sidebar {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial,
+    sans-serif;
+  box-sizing: border-box;
+
+  /* CRITICAL: Make it visible above everything */
+  position: fixed !important;
+  top: 500; /* avoid Naver’s top navbar */
+  left: 20px;
+  width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  z-index: 2147483647 !important; /* HIGH priority */
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* LIST RESET */
+#naver-news-cart-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* LINKS */
+#naver-news-cart-sidebar a {
+  text-decoration: none;
+  color: #2563eb;
+  transition: color 0.15s;
+}
+#naver-news-cart-sidebar a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* UTILITY CLASSES */
+#naver-news-cart-sidebar .rounded-lg {
+  border-radius: 0.75rem;
+}
+#naver-news-cart-sidebar .rounded {
+  border-radius: 0.375rem;
+}
+
+#naver-news-cart-sidebar .bg-white {
+  background: #fff;
+}
+#naver-news-cart-sidebar .bg-gray-50 {
+  background: #f9fafb;
+}
+#naver-news-cart-sidebar .hover\:bg-gray-100:hover {
+  background: #f3f4f6;
+}
+
+#naver-news-cart-sidebar .text-blue-600 {
+  color: #2563eb;
+}
+#naver-news-cart-sidebar .hover\:text-red-500:hover {
+  color: #ef4444;
+}
+#naver-news-cart-sidebar .text-gray-400 {
+  color: #9ca3af;
+}
+#naver-news-cart-sidebar .text-lg {
+  font-size: 1.125rem;
+}
+#naver-news-cart-sidebar .font-bold {
+  font-weight: 700;
+}
+
+#naver-news-cart-sidebar .flex {
+  display: flex;
+}
+#naver-news-cart-sidebar .flex-col {
+  flex-direction: column;
+}
+#naver-news-cart-sidebar .flex-1 {
+  flex: 1 1 0%;
+}
+#naver-news-cart-sidebar .items-center {
+  align-items: center;
+}
+#naver-news-cart-sidebar .justify-between {
+  justify-content: space-between;
+}
+
+#naver-news-cart-sidebar .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#naver-news-cart-sidebar .py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+#naver-news-cart-sidebar .py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#naver-news-cart-sidebar .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+
+#naver-news-cart-sidebar .truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#naver-news-cart-sidebar .max-w-\[200px\] {
+  max-width: 200px;
+}
+
+#naver-news-cart-sidebar .border {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+#naver-news-cart-sidebar .border-b {
+  border-bottom-width: 1px;
+}
+#naver-news-cart-sidebar .border-t {
+  border-top-width: 1px;
+}
+#naver-news-cart-sidebar .border-gray-100 {
+  border-color: #f3f4f6;
+}
+#naver-news-cart-sidebar .border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+#naver-news-cart-sidebar .overflow-y-auto {
+  overflow-y: auto;
+}
+#naver-news-cart-sidebar .max-h-\[80vh\] {
+  max-height: 80vh;
+}
+
+#naver-news-cart-sidebar .group:hover .group-hover\:inline {
+  display: inline;
+}
+
+#naver-news-cart-sidebar .hidden {
+  display: none;
+}
+#naver-news-cart-sidebar .absolute {
+  position: absolute;
+}
+#naver-news-cart-sidebar .bottom-4 {
+  bottom: 1rem;
+}
+#naver-news-cart-sidebar .left-1\/2 {
+  left: 50%;
+}
+#naver-news-cart-sidebar .-translate-x-1\/2 {
+  transform: translateX(-50%);
+}
+
+#naver-news-cart-sidebar .z-50 {
+  z-index: 50;
+}
+#naver-news-cart-sidebar .z-\[99999\] {
+  z-index: 99999;
+}
+
+#naver-news-cart-sidebar button,
+#naver-news-cart-sidebar button:focus,
+#naver-news-cart-sidebar button:active,
+#naver-news-cart-sidebar button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  border: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.naver-news-cart-divider {
+  border: none;
+  border-top: 1.5px solid #535f78;
+  margin: 0 0 0.5rem 0;
+  width: 100%;
+}
+
+.cart-mark-all-read-btn {
+  background-color: #cccccc;
+  color: #707070;
+  border: 1px solid #cccccc;
+  padding: 2px 10px;
+  border-radius: 0.375rem;
+  font-size: 0.85em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+/* Explicit hover style */
+.cart-mark-all-read-btn:hover {
+  background-color: #2563eb;
+  color: #292929;
+  border-color: #2563eb;
+}
